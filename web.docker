@@ -1,0 +1,15 @@
+FROM edvisor/nginx-node
+
+ADD ./vhost.conf /etc/nginx/conf.d/default.conf
+WORKDIR /var/www
+
+RUN npm install -g grunt-cli bower gulp webpack
+
+RUN groupadd -r node \
+&&  useradd -r -m -g node node
+RUN pwd
+RUN ls -l
+RUN npm install
+
+#RUN webpack
+EXPOSE 8080

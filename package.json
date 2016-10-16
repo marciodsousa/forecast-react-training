@@ -1,0 +1,36 @@
+{
+  "name": "react-training",
+  "version": "1.0.0",
+  "description": "just some react/babel/webpack training",
+  "main": "webpack.config..js",
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "not yet"
+  },
+  "author": "Marcio de Sousa",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.15.1",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.16.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.0",
+    "redux-promise-middleware": "^4.1.0",
+    "redux-thunk": "^2.1.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
