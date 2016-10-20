@@ -15,4 +15,4 @@ services:
             context: ./
             dockerfile: app.docker
         volumes:
-            - ./api/www/:/var/www
+            - ./api/www:/var/www
