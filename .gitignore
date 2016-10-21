@@ -41,6 +41,7 @@ node_modules/
 *.min.js
 !bootstrap.min.js
 *.map
+!bootstrap.min.js
 typings/
 !systemjs.config.js
 !gulpfile.js

@@ -22,18 +22,21 @@ export default class Layout extends React.Component {
         const locationForecast = this.props.forecast.locationForecast;
         
          if (locationForecast.currentForecast) {
+            //this.props.dispatch(fetchPast30DayForecast({ location: locationForecast.name }));
             return "header " + locationForecast.currentForecast.icon
          }
          return "header";
     }
 
     render() {
+
+        this.process
         var forecast;
 
-        if (this.props.forecast.loading) {
-            forecast =  (<h1>{this.props.forecast.loadingMessage}</h1>);
+        if (this.props.forecast.loading && this.props.forecast.primaryLoading) {
+            forecast =  (<h3>{this.props.forecast.loadingMessage}</h3>);
         }else{
-            forecast = (<Forecast searchedLocation={this.props.forecast.locationForecast}/>);
+            forecast = (<Forecast searchedLocation={this.props.forecast.locationForecast} loadingMessage={this.props.forecast.loadingMessage}/>);
         }
 
         const icon = this.processIconToBG();

@@ -19,8 +19,9 @@ Route::get('test/{name}', function ($name) {
 	echo 'asdasdasdasdasd' . $name;
 });
 
-Route::get('forecastlocation/{name}', 'ForecastLocation@show');
 Route::get('forecastlocation', 'ForecastLocation@index');
+Route::get('forecastlocation/{name}', 'ForecastLocation@show');
+Route::get('forecastlocation/{name}/pastdays/{numberOfDays}', 'ForecastLocation@listPast');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
