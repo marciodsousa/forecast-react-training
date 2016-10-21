@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "33be32cc5b474255f8d6e21a0f90cb40",
+    "content-hash": "c2d9b81d7ce918069b4a2e7c5bf71ff1",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -458,6 +458,60 @@
             "time": "2015-12-05T17:17:57+00:00"
         },
         {
+            "name": "kabudu/forecast-tools",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kabudu/forecast-tools.git",
+                "reference": "694f1a0f0932e5c79f714ce9fe11b0677b6b5579"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kabudu/forecast-tools/zipball/694f1a0f0932e5c79f714ce9fe11b0677b6b5579",
+                "reference": "694f1a0f0932e5c79f714ce9fe11b0677b6b5579",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*@dev",
+                "predis/predis": "v1.0.1"
+            },
+            "suggest": {
+                "predis/predis": "Flexible and feature-complete PHP client library for Redis to use the Redis cache handler",
+                "redis": ">= 2.8 to use the redis cache handler"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ForecastTools\\": "lib/",
+                    "ForecastTools\\Cache\\": "lib/",
+                    "ForecastTools\\Model\\": "lib/",
+                    "ForecastTools\\Exception\\": "lib/",
+                    "ForecastTools\\Test\\": "tests/",
+                    "Predis\\": "vendor/predis/predis/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Kamba Abudu",
+                    "email": "kabudu@gmail.com"
+                },
+                {
+                    "name": "Charlie Gorichanaz",
+                    "email": "charlie@gorichanaz.com"
+                },
+                {
+                    "name": "Shannon Little",
+                    "email": "slittle@drakecooper.com"
+                }
+            ],
+            "description": "Wrapper for Forecast.io API that supports many simultaneous API calls, substantially reducing wait time for any applications needing to look up weather conditions en masse.",
+            "time": "2015-06-21T02:49:23+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v5.0.35",
             "source": {
@@ -585,16 +639,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.30",
+            "version": "1.0.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "75138bb14160f3ba963750aa95e08d1d394fb198"
+                "reference": "1b5c4a0031697f46e779a9d1b309c2e1b24daeab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/75138bb14160f3ba963750aa95e08d1d394fb198",
-                "reference": "75138bb14160f3ba963750aa95e08d1d394fb198",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1b5c4a0031697f46e779a9d1b309c2e1b24daeab",
+                "reference": "1b5c4a0031697f46e779a9d1b309c2e1b24daeab",
                 "shasum": ""
             },
             "require": {
@@ -664,7 +718,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-10-18T16:20:02+00:00"
+            "time": "2016-10-19T20:38:46+00:00"
         },
         {
             "name": "monolog/monolog",
