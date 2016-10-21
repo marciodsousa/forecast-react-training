@@ -10,7 +10,7 @@ export default class Header extends React.Component {
   }
     render() {
         return (
-            <div>
+            <div style={{margin: '10px'}}>
                   <h1>What's the weather like in <input onKeyUp={this.handleSearch.bind(this)} class="location"/>?</h1>
             </div>
         );

@@ -12,7 +12,11 @@ export default class Forecast extends React.Component {
         if(!location.previousForecasts) {
             return null;
         }
-        const mappedForecasts = location.previousForecasts.map(singleForecast => <PreviousForecastComponent forecast= {singleForecast}/>);
+        if (this.props.loadingMessage) {
+            return (<h3>{this.props.loadingMessage}</h3>);
+        }
+
+        const mappedForecasts = location.previousForecasts.map(singleForecast => <PreviousForecastComponent key={singleForecast.time} forecast= {singleForecast}/>);
         return mappedForecasts
 
     }
