@@ -82,15 +82,17 @@ class ForecastLocation extends Controller {
 			if ($daily = $response->getDaily()) {
  				$daily = $daily[0];
 				$time = date("d-m-Y", $daily->getTime());
+				$temperatureMinTime = date("H:i", $daily->getTemperatureMinTime());
+				$temperatureMaxTime = date("H:i", $daily->getTemperatureMaxTime());
 
 				$dailyForecast = new DailyForecast(array(
 							'time' => $time,
 							'icon' => $daily->getIcon(),
 							'summary' => $daily->getSummary(),
 							'temperatureMin' => $daily->getTemperatureMin(),
-							'temperatureMinTime' => $daily->getTemperatureMinTime(),
+							'temperatureMinTime' => $temperatureMinTime,
 							'temperatureMax' => $daily->getTemperatureMax(),
-							'temperatureMaxTime' => $daily->getTemperatureMaxTime(),
+							'temperatureMaxTime' => $temperatureMaxTime,
 							'humidity' => $daily->getHumidity(),
 							'windSpeed' => $daily->getWindSpeed(),
 				));
